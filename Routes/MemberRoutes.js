@@ -144,9 +144,11 @@ router.get('/fetchReceipts', (req, res) => {
   }
 
   // Query to fetch member_pid and join with th_receipt
+  // th_receipt.receipt_date,
+
   const query = `
     SELECT th_receipt.receipt_pk,
-           th_receipt.receipt_date,
+           th_receipt.created_date,
            th_receipt.receipt_no,
            th_receipt.payment_mode,
            th_receipt.cheque_dd_transaction_id,
